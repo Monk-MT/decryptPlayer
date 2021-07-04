@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="@string/pref_key_toolbar"
+        android:title="@string/pref_title_toolbar"
+        android:layout="@layout/toolbar_settings"/>
+
+    <PreferenceCategory android:title="@string/pref_title_codec">
+        <SwitchPreference
+            android:checked="true"
+            android:key="@string/pref_key_using_media_codec"
+            android:summary="@string/pref_summary_using_media_codec"
+            android:summaryOff="@string/pref_summary_off_using_media_codec"
+            android:summaryOn="@string/pref_summary_off_using_media_codec"
+            android:title="@string/pref_title_using_media_codec" />
+
+        <SwitchPreference
+            android:checked="true"
+            android:key="@string/pref_key_using_media_codec_auto_rotate"
+            android:summary="@string/pref_summary_using_media_codec_auto_rotate"
+            android:summaryOff="@string/pref_summary_off_using_media_codec_auto_rotate"
+            android:summaryOn="@string/pref_summary_on_using_media_codec_auto_rotate"
+            android:title="@string/pref_title_using_media_codec_auto_rotate" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category_name_play">
+
+        <ListPreference
+            android:dialogTitle="@string/pref_title_pixel_format"
+            android:entries="@array/pref_entries_pixel_format"
+            android:entryValues="@array/pref_entry_values_pixel_format"
+            android:key="@string/pref_key_pixel_format"
+            android:summary="@string/pref_summary_pixel_format"
+            android:title="@string/pref_title_pixel_format" />
+
+        <ListPreference
+            android:dialogTitle="@string/pref_title_ratio"
+            android:entries="@array/pref_entries_ratio"
+            android:entryValues="@array/pref_entry_values_ratio"
+            android:key="@string/pref_key_ratio"
+            android:summary="@string/pref_summary_ratio"
+            android:title="@string/pref_title_ratio" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

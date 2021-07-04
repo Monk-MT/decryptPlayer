@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <FrameLayout
+        android:id="@+id/video_player_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--播放界面-->
+        <SurfaceView
+            android:id="@+id/video_player_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <!--    </FrameLayout>-->
+
+        <!--    <FrameLayout-->
+        <!--        android:id="@+id/video_control_layout"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="0dp"-->
+        <!--        android:background="#00FFFFFF"-->
+        <!--        app:layout_constraintDimensionRatio="16:9"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--播放按钮-->
+        <LinearLayout
+            android:id="@+id/video_play_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#33000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/video_center_play_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_replay_60" />
+
+            <TextView
+                android:id="@+id/video_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重新播放"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--加载界面-->
+        <LinearLayout
+            android:id="@+id/video_loading_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/video_loading_progress_bar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/video_download_speed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                tools:text="188Kb/s" />
+        </LinearLayout>
+
+        <!--分辨率选择-->
+        <LinearLayout
+            android:id="@+id/video_stream_select_layout"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="#80000000"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/video_streams_select_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--顶部控制条-->
+        <include layout="@layout/layout_top_controller" />
+
+        <!--手势操作界面-->
+        <include layout="@layout/layout_touch_gestures_show" />
+
+        <!--底部控制条-->
+        <include layout="@layout/layout_bottom_controller" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_touch_gestures_show_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+    <!-- 声音-->
+    <LinearLayout
+        android:id="@+id/video_volume_layout"
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@drawable/simple_player_center_bg"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/video_volume_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_volume_up_36"/>
+
+        <TextView
+            android:id="@+id/video_volume_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="50%"
+            />
+    </LinearLayout>
+
+    <!-- 亮度-->
+    <LinearLayout
+        android:id="@+id/video_brightness_layout"
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@drawable/simple_player_center_bg"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/video_brightness_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_brightness_6_36"/>
+
+        <TextView
+            android:id="@+id/video_brightness_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="50%"
+            />
+    </LinearLayout>
+
+    <!-- 快进快退-->
+    <LinearLayout
+        android:id="@+id/video_fast_forward_layout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@drawable/simple_player_center_bg"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/video_fast_forward_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="00:00" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/video_fast_forward_current_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                tools:text="00:00" />
+
+            <TextView
+                android:id="@+id/video_fast_forward_target_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                tools:text="00:00" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
